@@ -1,34 +1,31 @@
-﻿@{
+﻿@model Calculator.Models.Calculate
+@{
     ViewData["Title"] = "Home Page";
 }
 
-    <form action="~/Home/Index" method="post">
-        <p>@ViewBag.Requests</p>
-        <p>@ViewBag.Display</p>
-        <div>
-            <button name="input">AC</button>
-            <button name="input"><</button>
-            <button>%</button><br />
-            @for (int i = 1; i <= 9; i++)
-            {
-                if (i % 3 == 0)
-                {
-                    <button name="input" value="@i" type="submit">@i</button><br />
-                }
-                else
-                {
-        <button name="input" value="@i" type="submit">@i</button>
+    <div>
+        @using (Html.BeginForm("Index", "home", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label for="firstNum">First Number</label>
+                <input type="text" class="form-control" id="firstNum" name="firstNum" value="@Model.firstNum" />
+            </div>
 
-                }
-            }
-            <button>.</button>
-            <button>0</button>
-            <button>()</button>
-        </div>
-        <div>
-            <button type="submit" name="input" value="/">/</button>
-            <button type="submit" name="input" value="-">-</button>
-            <button type="submit" name="input" value="+">+</button>
-            <button type="submit" name="input" value="=">=</button>
-        </div>
-    </form>
+            <div class="form-group">
+                <label for="secondNum">Second Number</label>
+                <input type="text" class="form-control" id="secondNum" name="secondNum" value="@Model.secondNum" />
+            </div>
+
+            <div class="form-group">
+                <label for="total">Total</label>
+                <p id="total ">@Model.total</p>
+            </div>
+
+            <button type="submit" class="btn btn-info" name="operation" value="add">+</button>
+            <button type="submit" class="btn btn-danger" name="operation" value="sub">-</button>
+            <button type="submit" class="btn btn-warning" name="operation" value="multi">*</button>
+            <button type="submit" class="btn btn-default" name="opeeration" value="div">/</button>
+        }
+
+
+    </div>

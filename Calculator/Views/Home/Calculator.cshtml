@@ -4,3 +4,34 @@
 }
 
 <h1>Calculator</h1>
+
+<form action="~/Home/Index" method="post">
+    <p>@ViewBag.Requests</p>
+    <p>@ViewBag.Display</p>
+    <div>
+        <button name="input">AC</button>
+        <button name="input"><</button>
+        <button>%</button><br />
+        @for (int i = 1; i <= 9; i++)
+        {
+            if (i % 3 == 0)
+            {
+                <button name="input" value="@i" type="submit">@i</button><br />
+            }
+            else
+            {
+                <button name="input" value="@i" type="submit">@i</button>
+
+            }
+        }
+        <button>.</button>
+        <button>0</button>
+        <button>()</button>
+    </div>
+    <div>
+        <button type="submit" name="input" value="/">/</button>
+        <button type="submit" name="input" value="-">-</button>
+        <button type="submit" name="input" value="+">+</button>
+        <button type="submit" name="input" value="=">=</button>
+    </div>
+</form>

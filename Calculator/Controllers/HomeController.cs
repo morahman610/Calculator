@@ -21,31 +21,49 @@ namespace Calculator.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(new Calculate());
         }
 
         [HttpPost]
-        public IActionResult Index(string input)
+        public IActionResult Index(Calculate calculator, string operation)
         {
-
-            string display = HttpContext.Session.GetString("display") + input;
-
-            if (input == "=")
+            int result = 0;
+            switch (operation)
             {
+                case "add":
+                    result = calculator.firstNum + calculator.secondNum;
+                    break;
+                case "sub":
+                    result = calculator.firstNum - calculator.secondNum;
+                    break;
+            }
+
+            calculator.total = result;
+
+            return View(calculator);
+        }
+
+        [HttpPost]
+        public IActionResult Calculator(string input)
+        {
+            string display = "";
+
+            if(input != "=")
+            {
+                display = HttpContext.Session.GetString("display") + input;
+
+            } else {
+
                 for (int i = 0; i < display.Length; i++)
                 {
-                    switch (i)
+                    switch (display[i])
                     {
                         case '/':
-                            if (i + 1 != null)
-                            {
-                                display = (display[i] / display[i + 1]).ToString();
-
-                            }
-
+                            display = (int.Parse(display[i].ToString()) / int.Parse(display[i + 1].ToString())).ToString();
                             break;
+
                         case '*':
-                            if (i + 1 != null)
+                            if (display[i + 1] != null)
                             {
                                 display = (display[i] / display[i + 1]).ToString();
 

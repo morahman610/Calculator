@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mohammed Rahman\\source\\repos\\Calculator\\Calculator\\Calculator.csproj": {}
+    "/Users/minhazur/VSProjects/Calculator/Calculator/Calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mohammed Rahman\\source\\repos\\Calculator\\Calculator\\Calculator.csproj": {
+    "/Users/minhazur/VSProjects/Calculator/Calculator/Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohammed Rahman\\source\\repos\\Calculator\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "/Users/minhazur/VSProjects/Calculator/Calculator/Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "C:\\Users\\Mohammed Rahman\\source\\repos\\Calculator\\Calculator\\Calculator.csproj",
-        "packagesPath": "C:\\Users\\Mohammed Rahman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohammed Rahman\\source\\repos\\Calculator\\Calculator\\obj\\",
+        "projectPath": "/Users/minhazur/VSProjects/Calculator/Calculator/Calculator.csproj",
+        "packagesPath": "/Users/minhazur/.nuget/packages/",
+        "outputPath": "/Users/minhazur/VSProjects/Calculator/Calculator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mohammed Rahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/minhazur/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
         }
       }
     }
